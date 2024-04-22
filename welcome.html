@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Yelp Based Restaurant Recommendation System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+
+	    </style>
+	    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		/* Style the body */
+		body {
+		  font-family: Arial;
+		  margin: 0;
+		}
+
+		/* Header/Logo Title */
+		.header {
+		  padding: 50px;
+		  text-align: center;
+		  background: #A55D35;
+		  color: white;
+		  font-size: 30px;
+		}
+		.header img {
+		  float: left;
+		  width: 100px;
+		  height: 100px;
+		}
+
+		.footer {
+		  padding: 50px;
+		  text-align: center;
+		  background: #A55D35;
+		  color: white;
+		  font-size: 30px;
+		}
+		.footer img {
+		  float: left;
+		  width: 100px;
+		  height: 100px;
+		}
+		.float-container {
+		    border: 3px solid #fff;
+		    padding: 20px;
+		}
+
+		.float-child {
+		    width: 50%;
+		    float: left;
+		    padding: 20px;
+		    border: 1px solid #A55D35;
+		}
+		  body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 200;
+  left: 0;
+  background-color: #A55D35;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+	    </style>
+</head>
+<body>
+   <div class="header">
+
+
+	  <h1>Yelp Based Restaurant Recommendation System</h1>
+	</div>
+	<div class="sidenav">
+<!-- 	  <a href="/ScrapData">Scrapping Data</a>  -->
+	  <a href="/CFPage">Collabortive </a>
+	  <a href="/CBPage">Content Based</a>
+	  <a href="/HYPage">Hybrid</a> &nbsp;&nbsp;
+	  <form action="/logout" method="POST">
+	    <input type="submit"class="btn btn-success" value="Logout" style="background-color: #A55D35;">
+
+       </form>
+	</div>
+	<div class="main">
+    <h2>Welcome, {{userData.first_name}}!!</h2>
+    {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="text-danger">{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+
+ 	<div>
+	<div>
+	</div>
+ </body>
+</html>
